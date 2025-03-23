@@ -34,9 +34,9 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_DEPLOYMENT_TOKEN }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_PUBLISH_PROFILE }}
           action: upload
-          app_location: Frontend/build/client
+          app_location: Frontend/build
 
   # Hier begint de job voor het backend
   build-and-deploy-backend:
@@ -62,5 +62,5 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: h3xDemoBackendNevil # Pas mij aan naar hoe je mij in Azure genoemd hebt
-          publish-profile: ${{ secrets.AZURE_DEPLOYMENT_TOKEN }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
           package: Backend
