@@ -39,7 +39,6 @@ jobs:
           app_location: Frontend
           output_location: build/client
       
-              
 
   # Hier begint de job voor het backend
   build-and-deploy-backend:
