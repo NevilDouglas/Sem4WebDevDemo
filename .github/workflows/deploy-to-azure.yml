@@ -37,7 +37,8 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_DEPLOYMENT_TOKEN }}
           action: upload
           app_location: Frontend
-          output_location: build
+          output_location: build/client
+      
               
 
   # Hier begint de job voor het backend
